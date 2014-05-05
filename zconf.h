@@ -417,7 +417,7 @@ typedef uLong FAR uLongf;
 #endif
 
 #ifdef STDC
-#  ifndef Z_SOLO
+#  if !defined(Z_SOLO) && !defined(NO_SYS_TYPES_H)
 #    include <sys/types.h>      /* for off_t */
 #  endif
 #endif
